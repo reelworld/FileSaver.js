@@ -40,7 +40,7 @@ var saveAs = saveAs || (function(view) {
 		}
 		, force_saveable_type = "application/octet-stream"
 		// the Blob API is fundamentally broken as there is no "downloadfinished" event to subscribe to
-		, arbitrary_revoke_timeout = 1000 * 40 // in ms
+		, arbitrary_revoke_timeout = 1000 * 5 // in ms
 		, revoke = function(file) {
 			var revoker = function() {
 				if (typeof file === "string") { // file is an object URL
